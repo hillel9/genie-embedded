@@ -1,0 +1,46 @@
+<input id="prompt" class="prompt" type="text" placeholder="Enter text here..." autocomplete="off">
+
+<style>
+body{
+margin:0; padding:0; overflow:hidden;
+}
+.prompt {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      background-color: transparent;
+      border: none;
+      color: #333;
+      text-align: left;
+      width:100%;
+      display:inline-block;
+      outline: none;
+      padding:0 8px;
+      text-align:center;
+}
+.prompt::placeholder {
+      color: #666;
+      opacity: 1; /* Firefox requires this to apply placeholder color */
+}
+
+.prompt{
+      outline: none;
+}
+
+</style>
+
+  <script>
+    const textToCopy = "How do i create a customer training hub?";
+    const inputElement = document.getElementById("prompt");
+    
+    inputElement.addEventListener("focus", function() {
+      // Copy the text to clipboard
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          console.log("Text copied to clipboard");
+          // Optional: You can add a notification here if you want
+        })
+        .catch(err => {
+          console.error("Failed to copy text: ", err);
+        });
+    });
+  </script>
