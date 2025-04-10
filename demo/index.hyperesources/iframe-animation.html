@@ -75,14 +75,10 @@ function reverseWave (){
   }
 }
 
-let interval1 = setInterval(flicker, 70);
-let interval2 = setInterval(wave, 50);
-let interval3 = setInterval(reverseWave, 50);
+let interval1 = setInterval(flicker, 10);
 
 setTimeout(() => {
   clearInterval(interval1);
-  clearInterval(interval2);
-  clearInterval(interval3);  
 }, 120000);
 
 </script>
